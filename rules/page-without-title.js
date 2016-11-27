@@ -1,4 +1,6 @@
-module.exports = function($, url){
+const categories = require('../categories');
+
+exports.rule = function($, url){
   if($('head').length > 0){
     if($('head title').length == 0 || $('head').text() == ''){
         return {
@@ -10,3 +12,5 @@ module.exports = function($, url){
     }
   }
 };
+
+exports.categories = [categories.ACCESSIBILITY, categories.HTML];

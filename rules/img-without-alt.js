@@ -1,4 +1,6 @@
-module.exports = function($, url){
+const categories = require('../categories');
+
+exports.rule = function($, url){
   if($('img:not([alt])').length > 0){
       return {
           url,
@@ -8,3 +10,5 @@ module.exports = function($, url){
       };
   }
 };
+
+exports.categories =  [categories.ACCESSIBILITY, categories.HTML];

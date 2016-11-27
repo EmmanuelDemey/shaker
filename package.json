@@ -7,7 +7,7 @@
     "shaker": "cli.js"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --recursive && exit 1"
+    "test": "./node_modules/mocha/bin/mocha --recursive"
   },
   "author": "Emmanuel DEMEY",
   "license": "MIT",

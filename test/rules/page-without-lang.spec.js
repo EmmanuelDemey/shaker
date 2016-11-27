@@ -1,6 +1,6 @@
 const assert = require('assert');
 const cheerio = require('cheerio');
-const rule = require('../../rules/page-without-lang');
+const rule = require('../../rules/page-without-lang').rule;
 
 describe("page-without-lang rule ", () => {
   it('should not throw an error for <body></body>', () => {

@@ -1,5 +1,7 @@
 const winston = require('winston'),
-      cheerio = require('cheerio');
+      cheerio = require('cheerio'),
+      path = require('path'), 
+      request = require('request');
 
 require('colors');
 
@@ -12,11 +14,14 @@ const colors = {
 };
 
 function auditHtml(uri){
-  const request = require('request');
-  let htmlRules = require('./html-rules');
-
+  const pathToRule = path.join(path.resolve(__dirname), 'rules');
+  
   request({uri}, (error, response, body) => {
-    htmlRules = htmlRules.map(rule => rule(cheerio.load(body), uri));
+    let htmlRules = require("fs").readdirSync(pathToRule).map(function(file) {
+      return require(path.join(pathToRule, file));
+    });
+    
+    htmlRules = htmlRules.map(module => module.rule(cheerio.load(body), uri));
 
     htmlRules.forEach(m => {
       if(m) {

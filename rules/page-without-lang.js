@@ -1,4 +1,6 @@
-module.exports = function($, url){
+const categories = require('../categories');
+
+exports.rule = function($, url){
   if($('html').length > 0){
     if(!$('html').attr('lang') || $('html').attr('lang') == ''  ){
         return {
@@ -10,3 +12,5 @@ module.exports = function($, url){
     }
   }
 };
+
+exports.categories = [categories.ACCESSIBILITY, categories.HTML];

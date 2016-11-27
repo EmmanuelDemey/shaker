@@ -1,6 +1,6 @@
 const assert = require('assert');
 const cheerio = require('cheerio');
-const rule = require('../../rules/img-without-alt');
+const rule = require('../../rules/img-without-alt').rule;
 
 describe("img-without-alt rule ", () => {
   it('should not throw an error for <div></div>', () => {

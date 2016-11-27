@@ -1,6 +1,6 @@
 const assert = require('assert');
 const cheerio = require('cheerio');
-const rule = require('../../rules/page-without-title');
+const rule = require('../../rules/page-without-title').rule;
 
 describe("page-without-title rule ", () => {
   it('should not throw an error for <body></body>', () => {

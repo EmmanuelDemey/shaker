@@ -1,6 +1,6 @@
 const assert = require('assert');
 const cheerio = require('cheerio');
-const rule = require('../../rules/title-with-aria-attribute');
+const rule = require('../../rules/title-with-aria-attribute').rule;
 
 describe("title-with-aria-attribute rule ", () => {
 
