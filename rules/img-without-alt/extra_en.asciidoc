@@ -1,0 +1,4 @@
+[source,html]
+----
+<img src="shaker.png" alt="shaker logo" />
+----

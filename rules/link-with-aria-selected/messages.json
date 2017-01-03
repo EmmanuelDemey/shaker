@@ -1,0 +1,7 @@
+{
+    "en": {
+        "level": "error",
+        "message": "You have link element with aria-selected attribute",
+        "description": "According to the specification, this attribute should not be used with link"
+    }
+}

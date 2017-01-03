@@ -1,0 +1,7 @@
+{
+    "en": {
+        "level": "error",
+        "message": "The page should have a lang attribut edefined on the html element",
+        "description": "the lang attribute is mandatory for vocal synthetisers"
+    }
+}
